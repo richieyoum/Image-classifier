@@ -2,18 +2,53 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Richie's Image Classifier</title>
   </head>
   <body>
-    <video autoplay playsinline muted id="webcam" width="500" height="500"></video>
+    <div class="nav navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="https://richieyoum.github.io/richies-lab/" class="navbar-brand"><strong>Richie's lab</strong></a>
+      </div>
+    </div>
+
+    <section class="jumbotron text-center bg-light">
+      <div class="container">
+        <h1 class="jumbotron-heading">Image Classifier</h1>
+        <p class="lead text-muted">This is an image classifier! Try uploading an image or use your webcam to classify objects. <br> And don't worry, no one will see your image but yourself :)</p>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+          <label for="imageUpload" class='btn btn-primary my-2'>Upload an image</label>
+          <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+      </div>
+    </section>
+
+      <div class="image-section" style="display:none;">
+        <div class="img-preview">
+          <div class="imagePreview"></div>
+        </div>
+        <div class="prediction">
+          <button type="button" class="btn btn-primary btn-lg" id="btn-predict">Predict</button>
+        </div>
+      </div>
+
+    <div class="loader" style="display:none;"></div>
+    <h3 id="result"><span></span></h3>
+
+    <!-- <video autoplay playsinline muted id="webcam" width="500" height="500"></video>
     <button id="class-a">Add A</button>
     <button id="class-b">Add B</button>
     <button id="class-c">Add C</button>
-    <button id="class-d">Add D</button>
+    <button id="class-d">Add D</button> -->
 
     <div id="console"></div>
     <script src="index.js"></script>
