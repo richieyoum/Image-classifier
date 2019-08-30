@@ -5,6 +5,7 @@ h1{
 .webcam{
   margin: 0 auto;
   width:50%;
+
   text-align: center;
 }
 
@@ -13,7 +14,7 @@ h1{
 }
 
 .class-buttons{
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 .btn{
@@ -22,4 +23,10 @@ h1{
 
 .navbar-brand{
   margin: 10px 0;
+}
+
+#console{
+  margin:0 auto;
+  width:50%;
+  text-align: center;
 }
