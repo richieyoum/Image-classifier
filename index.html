@@ -5,15 +5,34 @@
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Richie's Image Classifier</title>
   </head>
   <body>
-    <video autoplay playsinline muted id="webcam" width="500" height="500"></video>
-    <button id="class-a">Add A</button>
-    <button id="class-b">Add B</button>
-    <button id="class-c">Add C</button>
-    <button id="class-d">Add D</button>
+    <div class="nav navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="https://richieyoum.github.io/richies-lab/" class="navbar-brand"><strong>Richie's lab</strong></a>
+      </div>
+    </div>
+
+    <div class="jumbotron text-center bg-light">
+      <div class="container">
+        <h1 class="jumbotron-heading">Image Classifier</h1>
+        <p class="lead text-muted">Try training each class with different objects, facial expression, or even movements!</p>
+        <p class="lead text-muted">Each click takes a snapshot of the video as training data. Recommended 20+ samples per class</p>
+        <p class="lead text-muted">And don't worry, no one will see your image but yourself :)</p>
+      </div>
+    </div>
+    <div class="webcam">
+      <video autoplay playsinline muted id="webcam" width="600" height="600"></video>
+      <div class="class-buttons">
+        <button class="btn btn-primary" id="class-a">Add A</button>
+        <button class="btn btn-primary" id="class-b">Add B</button>
+        <button class="btn btn-primary" id="class-c">Add C</button>
+        <button class="btn btn-primary" id="class-d">Add D</button>
+      </div>
+    </div>
 
     <div id="console"></div>
     <script src="index.js"></script>

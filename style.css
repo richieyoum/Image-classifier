@@ -1,0 +1,25 @@
+h1{
+  margin: 50px;
+}
+
+.webcam{
+  margin: 0 auto;
+  width:50%;
+  text-align: center;
+}
+
+.jumbotron{
+  margin-bottom: 0;
+}
+
+.class-buttons{
+  margin-bottom: 100px;
+}
+
+.btn{
+  margin: auto 20px;
+}
+
+.navbar-brand{
+  margin: 10px 0;
+}
